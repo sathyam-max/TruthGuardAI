@@ -163,7 +163,8 @@ app.post('/api/analyze', async (req, res) => {
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
+// Using regex instead of '*' for Express 5.x compatibility
+app.get(/^\/(?!api).*/, (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
