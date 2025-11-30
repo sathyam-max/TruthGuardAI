@@ -53,10 +53,6 @@ An AI-powered application that analyzes news articles, forwarded messages, and s
 
 5. Open your browser and navigate to `http://localhost:5173`
 
-## Deployment
-
-See [DEPLOY.md](DEPLOY.md) for instructions on deploying to Render.
-
 ## How It Works
 
 1. User pastes news text, article, or forwarded message
