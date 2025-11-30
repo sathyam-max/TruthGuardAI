@@ -1,16 +1,77 @@
-# React + Vite
+# TruthGuardAI – Fake News & Forward Message Detector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered application that analyzes news articles, forwarded messages, and social media posts to detect fake news and misinformation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **Real-time Analysis**: Instantly analyze any text for credibility
+- 🤖 **AI-Powered**: Uses Google's Gemini AI for intelligent fact-checking
+- 🌐 **Multi-language Support**: Works with English, Tamil, Hindi, and more
+- 📱 **Modern UI**: Beautiful, responsive interface with glassmorphism design
+- 🎯 **Accurate Detection**: Classifies content as REAL, FAKE, or MISLEADING
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React + Vite
+- **Backend**: Node.js + Express
+- **AI**: Google Generative AI (Gemini)
+- **Styling**: Vanilla CSS with modern design patterns
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher)
+- Google Gemini API Key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sathyam-max/TruthGuardAI.git
+   cd TruthGuardAI
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory:
+   ```
+   GOOGLE_API_KEY=your_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   In a separate terminal, start the backend:
+   ```bash
+   node server/server.js
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`
+
+## Deployment
+
+See [DEPLOY.md](DEPLOY.md) for instructions on deploying to Render.
+
+## How It Works
+
+1. User pastes news text, article, or forwarded message
+2. Text is sent to the backend API
+3. Gemini AI analyzes the content using a specialized prompt
+4. Results are returned with:
+   - Status (REAL/FAKE/MISLEADING)
+   - Confidence level
+   - Detailed reasoning
+   - Advice for the user
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the MIT License.
